@@ -64,7 +64,9 @@ func (t *tab) Render() string {
 func headerAndRows(data interface{}, fields map[string]struct{}) (h Row, r []Row) {
 	v := reflect.ValueOf(data)
 
-	var t reflect.Type
+	var (
+		t, elemT reflect.Type
+	)
 
 	if t = v.Type(); t.Kind() != reflect.Slice {
 		t1 := t.Elem()
@@ -75,7 +77,10 @@ func headerAndRows(data interface{}, fields map[string]struct{}) (h Row, r []Row
 		t = t1
 	}
 
-	elemT := t.Elem().Elem()
+	if elemT = t.Elem(); elemT.Kind() != reflect.Struct {
+		elemT = t.Elem().Elem()
+	}
+
 	h = make(Row, 0, elemT.NumField())
 
 	excludes := make(map[int]struct{})
@@ -104,7 +109,7 @@ func headerAndRows(data interface{}, fields map[string]struct{}) (h Row, r []Row
 
 		for fi := 0; fi < elemT.NumField(); fi++ {
 			if _, exclude := excludes[fi]; !exclude {
-				rrVal := rr.Elem().Field(fi)
+				rrVal := rr.Field(fi)
 				if rrVal.Kind() == reflect.Slice {
 					r[ri] = append(r[ri], renderSliceVal(rrVal))
 				} else {

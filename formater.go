@@ -120,7 +120,17 @@ func (f *formater) Table(opts ...TableOption) Table {
 }
 
 func (f *formater) isTable() bool {
-	v := reflect.ValueOf(f.data)
+	var (
+		v = reflect.ValueOf(f.data)
+		t reflect.Type
+	)
 
-	return v.Type().Kind() == reflect.Slice
+	if t = v.Type(); t.Kind() != reflect.Slice {
+		t1 := t.Elem()
+		if t1.Kind() != reflect.Slice {
+			return false
+		}
+	}
+
+	return true
 }
