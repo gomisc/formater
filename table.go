@@ -113,7 +113,11 @@ func headerAndRows(data interface{}, fields map[string]struct{}) (h Row, r []Row
 				if rrVal.Kind() == reflect.Slice {
 					r[ri] = append(r[ri], renderSliceVal(rrVal))
 				} else {
-					r[ri] = append(r[ri], rrVal.Interface())
+					if rrVal.Kind() == reflect.Ptr && !rrVal.IsZero() {
+						r[ri] = append(r[ri], rrVal.Elem().Interface())
+					} else {
+						r[ri] = append(r[ri], rrVal.Interface())
+					}
 				}
 			}
 		}
