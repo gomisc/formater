@@ -3,14 +3,14 @@ module git.eth4.dev/golibs/formater
 go 1.18
 
 require (
-	git.eth4.dev/golibs/errors v1.1.17
+	git.eth4.dev/golibs/errors v1.2.1
 	github.com/jedib0t/go-pretty/v6 v6.3.6
 )
 
 require gopkg.in/yaml.v3 v3.0.1
 
 require (
-	git.eth4.dev/golibs/fields v1.0.6 // indirect
+	git.eth4.dev/golibs/fields v1.1.0 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
 	github.com/rivo/uniseg v0.3.4 // indirect

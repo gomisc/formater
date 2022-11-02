@@ -1,8 +1,8 @@
-git.eth4.dev/golibs/errors v1.1.17 h1:CZmK+CAjeR4ch+YHtSLGiGmON3GYgUrN13uhj3X0aUA=
-git.eth4.dev/golibs/errors v1.1.17/go.mod h1:1G1lyVB1l2bf9X2CvQf//WfOIcQ/KwcE2Bd8VXOGaNY=
-git.eth4.dev/golibs/fields v1.0.6 h1:qobLeHsVzxhsUH+cBc8JEtz/B9M691HSLy0J9pUJXHA=
-git.eth4.dev/golibs/fields v1.0.6/go.mod h1:SfKMdRc3L2vprkZQ7/eTK5tuKrQ+w7O2Fh6r3ZQjmP8=
-git.eth4.dev/golibs/slog v1.0.9 h1:tol+rBAMb0d4hbjuroRb99qJE4Nr44RiTBjJKsWnwuo=
+git.eth4.dev/golibs/errors v1.2.1 h1:A2lN/+VzakttqEbD2+P5cZZSW+t01NHEPfUbGjYcHyA=
+git.eth4.dev/golibs/errors v1.2.1/go.mod h1:+gcM3YuE2AMWnTMKTARGmg8P1iY/TPZHaj/L1gZqi3o=
+git.eth4.dev/golibs/fields v1.1.0 h1:huVhoa9Yc3n5FFAgtKjN8mdghbFbG8iJqW8n57tjHjg=
+git.eth4.dev/golibs/fields v1.1.0/go.mod h1:YzNxsU2nRSAntwL9d43c3n8XTPln4kpdiSzKqLW9GLQ=
+git.eth4.dev/golibs/slog v1.1.0 h1:22gxGibtT6do3j+gP63dtL57YCMt8O6wQOrKpeGP1ow=
 github.com/benbjohnson/clock v1.3.0 h1:ip6w0uFQkncKQ979AypyG0ER7mqUSBdKLOgAle/AT8A=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
