@@ -7,7 +7,7 @@ import (
 	"os"
 	"reflect"
 
-	"git.corout.in/golibs/errors"
+	"git.eth4.dev/golibs/errors"
 	"github.com/jedib0t/go-pretty/v6/table"
 	"gopkg.in/yaml.v3"
 )
