@@ -105,6 +105,10 @@ func headerAndRows(data interface{}, fields map[string]struct{}) (h Row, r []Row
 
 	for ri := 0; ri < vs.Len(); ri++ {
 		rr := vs.Index(ri)
+		if rr.Kind() == reflect.Ptr {
+			rr = rr.Elem()
+		}
+
 		r[ri] = make(Row, 0, len(h))
 
 		for fi := 0; fi < elemT.NumField(); fi++ {
