@@ -7,8 +7,8 @@ import (
 	"os"
 	"reflect"
 
-	"git.eth4.dev/golibs/errors"
 	"github.com/jedib0t/go-pretty/v6/table"
+	"gopkg.in/gomisc/errors.v1"
 	"gopkg.in/yaml.v3"
 )
 
